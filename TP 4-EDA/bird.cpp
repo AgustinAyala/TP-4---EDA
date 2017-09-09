@@ -1,0 +1,46 @@
+#include "bird.h"
+
+/********************************Getters************************************/
+
+double Bird::getDir() { return this->currentDirection; };
+
+double Bird::getNewDir() { return this->newDirection; };
+
+unsigned int Bird::getEyeSight() { return this->eyeSight; };
+
+double Bird::getRandomJ() { return this->randomJ; };
+
+/***************************************************************************/
+
+
+//Metodos Publicos: nescesito que los vea la simulacion
+void Bird::move()
+{
+	double prom = 0.0; //variable auxiliar para calcular el promedio de las direcciones de los birds en el rango del bird del cual quiero saber su newDir.
+
+
+}
+
+
+double Bird::calculate_new_dir(Bird * bird, unsigned int birdCount)
+{
+	double prom = 0.0;
+
+	for (int i = 0; i < (birdCount - 1); i++)
+	{
+		if (!(this->is_equal_bird(bird[i])) )  // es otro bird distinto al cual quiero calcular newDir? Si es distinto, me fijo si esta 
+													// en su alcance
+		{
+			if (is_in_eyeSight( ))
+
+		}
+
+
+	}
+	return prom;
+}
+
+bool Bird::is_equal_bird(Bird& bird) const
+{
+	return (this == &bird);
+}
