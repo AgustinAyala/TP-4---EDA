@@ -6,6 +6,26 @@
 #include <ctime>
 #include <cstdlib>
 #include <cstdbool>
+#include <cmath>
+
+
+//*******************************************************************************************************//
+class Position {
+public:
+	float x;
+	float y;
+	float Xmax;
+	float Ymax;
+
+
+	Position() // Constructor: incializo los valores inciales (x,y)
+		: Xmax(100.0),
+		Ymax(70.0),
+		x((float)(rand()) * Xmax / (float)(RAND_MAX)),
+		y((float)(rand()) * Ymax / (float)(RAND_MAX)) {}
+};
+
+
 
 class Bird {
 
@@ -30,7 +50,7 @@ class Bird {
 			pos(Position()) {}
 
 
-		void move();                                   //falta
+		void move(Bird * bird, unsigned int birdCount);                                   //falta
 		void incrementEyeSight();
 		void decrementEyesight();
 		void incrementSpeed();
@@ -38,36 +58,18 @@ class Bird {
 		
 		double calculate_new_dir(Bird * bird, unsigned int birdCount);
 		bool is_equal_bird (Bird& bird) const;
+		bool is_in_eyeSight(Bird bird);
 		//getters
 		double getDir();
 		double getNewDir();
 		unsigned int getEyeSight();
 		double getRandomJ();
+		Position getPosition();
 
 };
 
 
 unsigned int Bird::birdCount = 0; //esto no estoy seguro todavia, pero creo q me setearia inicialmente a cero para despues
 								  // en la simulacion incrementarlo;
-
-
-//*******************************************************************************************************//
-class Position {
-	public:
-		float x;
-		float y;
-		float Xmax;
-		float Ymax;
-
-
-		Position() // Constructor: incializo los valores inciales (x,y)
-			: Xmax(100.0),
-			  Ymax(70.0),
-			  x((float)(rand()) * Xmax / (float)(RAND_MAX)),
-			  y((float)(rand()) * Ymax / (float)(RAND_MAX)) {}
-};
-
-
-
 
 #endif // !BIRD_H

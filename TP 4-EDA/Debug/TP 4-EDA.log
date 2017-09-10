@@ -1,0 +1,3 @@
+﻿  bird.cpp
+c:\users\agust\source\repos\tp 4-eda\tp 4-eda\bird.cpp(29): warning C4018: '<': no coinciden signed/unsigned
+c:\users\agust\source\repos\tp 4-eda\tp 4-eda\bird.cpp(47): error C3861: 'calculate_distance': no se encontró el identificador
