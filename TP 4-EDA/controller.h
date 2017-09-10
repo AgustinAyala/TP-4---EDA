@@ -7,6 +7,7 @@
 
 class Controller {
 	public:
+		Controller(Bird* birds);
 		bool isNotExit();
 		void update();
 		Bird *birds;
