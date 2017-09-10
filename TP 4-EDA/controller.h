@@ -11,6 +11,7 @@ class Controller {
 	public:
 		Controller(ALLEGRO_DISPLAY *display,Bird* birds,uint cnt_birds);
 		bool is_not_exit();
+		bool is_ok();
 		void update();
 		Bird *birds;
 		uint cnt_birds;
@@ -19,6 +20,7 @@ class Controller {
 		ALLEGRO_EVENT_QUEUE *queue;
 	
 		bool exit_flag;
+		bool is_ok_flag;
 };
 
 #endif

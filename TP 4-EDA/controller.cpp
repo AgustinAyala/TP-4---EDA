@@ -1,10 +1,15 @@
 #include "controller.h"
 
 Controller::Controller(ALLEGRO_DISPLAY *display,Bird* birds,uint cnt_birds) {
+	this->is_ok_flag = 1;
+
 	this->exit_flag = 0;
 	this->birds = birds;
 	this->cnt_birds = cnt_birds;
 	this->queue = al_create_event_queue();
+	if (!this->queue) {
+		this->is_ok_flag = 0;
+	}
 	al_register_event_source(this->queue, al_get_display_event_source(display));
 }
 
@@ -18,6 +23,9 @@ void Controller::update() {
 }
 bool Controller::is_not_exit() {
 	return !this->exit_flag;
+}
+bool Controller::is_ok() {
+	return this->is_ok_flag;
 }
 Controller::~Controller() {
 	al_destroy_event_queue(this->queue);
