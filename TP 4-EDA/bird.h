@@ -6,8 +6,7 @@
 #include <ctime>
 #include <cstdlib>
 #include <cstdbool>
-#include <cmath>
-
+#define PI 3.14159265
 
 //*******************************************************************************************************//
 class Position {

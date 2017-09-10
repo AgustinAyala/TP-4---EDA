@@ -1,4 +1,6 @@
 #include "bird.h"
+#include <cmath>
+
 // test
 
 
@@ -26,6 +28,8 @@ void Bird::move(Bird * bird, unsigned int birdCount)
 void Bird::move(Bird * bird, unsigned int birdCount)
 {
 	this->newDirection = this->calculate_new_dir(bird, birdCount); //variable auxiliar para calcular el promedio de las direcciones de los birds en el rango del bird del cual quiero saber su newDir.
+	this->pos.x += cos( (this->newDirection) * 2 * PI / 360 );
+	this->pos.x += sin( (this->newDirection) * 2 * PI / 360 );
 }
 
 
