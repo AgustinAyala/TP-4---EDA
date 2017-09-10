@@ -1,3 +1,10 @@
 ﻿  viewer.cpp
-  TP 4-EDA.vcxproj -> F:\TP-4---EDA\x64\Debug\TP 4-EDA.exe
-  TP 4-EDA.vcxproj -> F:\TP-4---EDA\x64\Debug\TP 4-EDA.pdb (Partial PDB)
+  bird.cpp
+f:\tp-4---eda\tp 4-eda\bird.cpp(57): error C3861: 'pow': identifier not found
+f:\tp-4---eda\tp 4-eda\bird.cpp(57): error C3861: 'sqrt': identifier not found
+  Generating Code...
+  Compiling...
+  simulation.cpp
+  main.cpp
+  controller.cpp
+  Generating Code...
