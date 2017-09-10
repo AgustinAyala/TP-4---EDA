@@ -1,4 +1,6 @@
 #include "bird.h"
+// test
+
 
 /********************************Getters************************************/
 
@@ -14,11 +16,16 @@ Position Bird::getPosition() { return this->pos; };
 
 /***************************************************************************/
 
-
 //Metodos Publicos: nescesito que los vea la simulacion (todavia hay q chekear!!!!!!)
 void Bird::move(Bird * bird, unsigned int birdCount)
 {
 	this->newDirection = this->calculate_new_dir(bird, birdCount);
+
+}
+
+void Bird::move(Bird * bird, unsigned int birdCount)
+{
+	this->newDirection = this->calculate_new_dir(bird, birdCount); //variable auxiliar para calcular el promedio de las direcciones de los birds en el rango del bird del cual quiero saber su newDir.
 }
 
 
@@ -28,10 +35,10 @@ double Bird::calculate_new_dir(Bird * bird, unsigned int birdCount)
 
 	for (int i = 0; i < (birdCount - 1); i++)
 	{
-		if (!(this->is_equal_bird(bird[i]))  && (this->is_in_eyeSight(bird[i])) )  
+
+		if (!(this->is_equal_bird(bird[i]))  &&  (this->is_in_eyeSight(bird[i])) )  
 			// es otro bird distinto al cual quiero calcular newDir? y esta en su alcance? si es asi, lo promedio para calcular su nueva direccion;
 			prom += prom + ( (bird[i].getDir()) / (double)birdCount );
-
 	}
 	return prom;
 }

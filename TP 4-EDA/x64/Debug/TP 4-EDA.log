@@ -1,0 +1,6 @@
+﻿viewer.obj : error LNK2005: "public: static unsigned int Bird::birdCount" (?birdCount@Bird@@2IA) already defined in bird.obj
+viewer.obj : error LNK2019: unresolved external symbol __imp_al_init_primitives_addon referenced in function "public: __cdecl Viewer::Viewer(char *,class Bird *,unsigned int,unsigned int,unsigned int)" (??0Viewer@@QEAA@PEADPEAVBird@@III@Z)
+viewer.obj : error LNK2019: unresolved external symbol __imp_al_shutdown_primitives_addon referenced in function "public: __cdecl Viewer::~Viewer(void)" (??1Viewer@@QEAA@XZ)
+viewer.obj : error LNK2019: unresolved external symbol __imp_al_init_image_addon referenced in function "public: __cdecl Viewer::Viewer(char *,class Bird *,unsigned int,unsigned int,unsigned int)" (??0Viewer@@QEAA@PEADPEAVBird@@III@Z)
+viewer.obj : error LNK2019: unresolved external symbol __imp_al_shutdown_image_addon referenced in function "public: __cdecl Viewer::~Viewer(void)" (??1Viewer@@QEAA@XZ)
+F:\TP-4---EDA\x64\Debug\TP 4-EDA.exe : fatal error LNK1120: 4 unresolved externals

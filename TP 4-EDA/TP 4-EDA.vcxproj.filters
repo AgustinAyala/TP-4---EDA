@@ -15,13 +15,31 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="viewer.h">
+      <Filter>Archivos de código fuente</Filter>
+    </ClInclude>
     <ClInclude Include="bird.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de código fuente</Filter>
+    </ClInclude>
+    <ClInclude Include="controller.h">
+      <Filter>Archivos de código fuente</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="bird.cpp">
-      <Filter>Archivos de código fuente</Filter>
+    <ClCompile Include="viewer.cpp">
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="bird.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="controller.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
