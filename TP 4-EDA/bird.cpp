@@ -19,11 +19,7 @@ Position Bird::getPosition() { return this->pos; };
 /***************************************************************************/
 
 //Metodos Publicos: nescesito que los vea la simulacion (todavia hay q chekear!!!!!!)
-void Bird::move(Bird * bird, unsigned int birdCount)
-{
-	this->newDirection = this->calculate_new_dir(bird, birdCount);
 
-}
 
 void Bird::move(Bird * bird, unsigned int birdCount)
 {
@@ -67,8 +63,15 @@ double calculate_distance(Position p1, Position p2)
 	return distance;
 }
 
+void Bird::incrementEyeSight()
+{
+	this->eyeSight++;
+}
 
-
+void Bird::decrementEyesight()
+{
+	this->eyeSight--;
+}
 
 ////******************codigo para prueba*********************/////////
 int main(void)

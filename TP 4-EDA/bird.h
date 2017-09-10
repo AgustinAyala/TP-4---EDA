@@ -20,8 +20,9 @@ public:
 	Position() // Constructor: incializo los valores inciales (x,y)
 		: Xmax(100.0),
 		Ymax(70.0),
-		x((float)(rand()) * Xmax / (float)(RAND_MAX)),
-		y((float)(rand()) * Ymax / (float)(RAND_MAX)) {}
+		x(5), //((float)(rand()) * Xmax / (float)(RAND_MAX)),
+		y(2) //((float)(rand()) * Ymax / (float)(RAND_MAX)) 
+	{}
 };
 
 
@@ -44,7 +45,7 @@ class Bird {
 			: eyeSight(eyeSight_),
 			speed(speed_),
 			maxRandomJiggle(maxRandomJiggle_),
-			currentDirection((double)( 360.0*rand()/RAND_MAX) ),
+			currentDirection((double) (15)), //( 360.0*rand()/RAND_MAX) ),
 			pos(Position()) {}
 
 
