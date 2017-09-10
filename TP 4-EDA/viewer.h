@@ -3,6 +3,8 @@
 
 #include "bird.h"
 #include "allegro5\allegro.h"
+#include "allegro5\display.h"
+#include "allegro5\bitmap.h"
 
 class Viewer{
 	public:
@@ -16,11 +18,11 @@ class Viewer{
 
 		unsigned int	width;
 		unsigned int	heigth;
-		AL_BITMAP *	background;
-		AL_BITMAP *	birdPic;
+		ALLEGRO_BITMAP*	background;
+		ALLEGRO_BITMAP*	birdPic;
 		Bird *	birds;
-		AL_DISPLAY *	display;
-		AL_FONT	*	font;
+		ALLEGRO_BITMAP*	display;
+		ALLEGRO_BITMAP*	font;
 	
 };
 

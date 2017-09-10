@@ -1,0 +1,30 @@
+﻿  viewer.cpp
+f:\tp-4---eda\tp 4-eda\bird.h(20): error C3646: 'pos': unknown override specifier
+f:\tp-4---eda\tp 4-eda\bird.h(20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+f:\tp-4---eda\tp 4-eda\bird.h(31): error C3861: 'Position': identifier not found
+f:\tp-4---eda\tp 4-eda\bird.h(31): error C2614: 'Bird': illegal member initialization: 'pos' is not a base or member
+f:\tp-4---eda\tp 4-eda\viewer.h(7): error C2001: newline in constant
+f:\tp-4---eda\tp 4-eda\viewer.h(21): error C2143: syntax error: missing ';' before '*'
+f:\tp-4---eda\tp 4-eda\viewer.h(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+f:\tp-4---eda\tp 4-eda\viewer.h(21): error C2238: unexpected token(s) preceding ';'
+f:\tp-4---eda\tp 4-eda\viewer.h(22): error C2143: syntax error: missing ';' before '*'
+f:\tp-4---eda\tp 4-eda\viewer.h(22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+f:\tp-4---eda\tp 4-eda\viewer.h(22): error C2238: unexpected token(s) preceding ';'
+f:\tp-4---eda\tp 4-eda\viewer.h(24): error C2143: syntax error: missing ';' before '*'
+f:\tp-4---eda\tp 4-eda\viewer.h(24): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+f:\tp-4---eda\tp 4-eda\viewer.h(24): error C2238: unexpected token(s) preceding ';'
+f:\tp-4---eda\tp 4-eda\viewer.h(25): error C2143: syntax error: missing ';' before '*'
+f:\tp-4---eda\tp 4-eda\viewer.h(25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+f:\tp-4---eda\tp 4-eda\viewer.h(25): error C2238: unexpected token(s) preceding ';'
+f:\tp-4---eda\tp 4-eda\viewer.cpp(21): error C2065: 'birdCount': undeclared identifier
+f:\tp-4---eda\tp 4-eda\viewer.cpp(23): error C2065: 'height': undeclared identifier
+  main.cpp
+  bird.cpp
+f:\tp-4---eda\tp 4-eda\bird.h(20): error C3646: 'pos': unknown override specifier
+f:\tp-4---eda\tp 4-eda\bird.h(20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+f:\tp-4---eda\tp 4-eda\bird.h(31): error C3861: 'Position': identifier not found
+f:\tp-4---eda\tp 4-eda\bird.h(31): error C2614: 'Bird': illegal member initialization: 'pos' is not a base or member
+f:\tp-4---eda\tp 4-eda\bird.cpp(31): warning C4018: '<': signed/unsigned mismatch
+f:\tp-4---eda\tp 4-eda\bird.cpp(36): error C3861: 'is_in_eyeSight': identifier not found
+f:\tp-4---eda\tp 4-eda\bird.cpp(38): error C2059: syntax error: '}'
+  Generating Code...
