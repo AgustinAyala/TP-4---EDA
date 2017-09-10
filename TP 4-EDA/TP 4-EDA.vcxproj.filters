@@ -24,6 +24,12 @@
     <ClInclude Include="controller.h">
       <Filter>Archivos de código fuente</Filter>
     </ClInclude>
+    <ClInclude Include="simulation.h">
+      <Filter>Archivos de código fuente</Filter>
+    </ClInclude>
+    <ClInclude Include="parser.h">
+      <Filter>Archivos de código fuente</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="viewer.cpp">
@@ -36,6 +42,12 @@
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="controller.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="simulation.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="parser.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
   </ItemGroup>

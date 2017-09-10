@@ -1,6 +1,7 @@
 #include "bird.h"
 // test
 
+double calculate_distance(Position p1, Position p2);
 
 /********************************Getters************************************/
 
@@ -23,17 +24,11 @@ void Bird::move(Bird * bird, unsigned int birdCount)
 
 }
 
-void Bird::move(Bird * bird, unsigned int birdCount)
-{
-	this->newDirection = this->calculate_new_dir(bird, birdCount); //variable auxiliar para calcular el promedio de las direcciones de los birds en el rango del bird del cual quiero saber su newDir.
-}
-
-
 double Bird::calculate_new_dir(Bird * bird, unsigned int birdCount)
 {
 	double prom = ( (this->currentDirection) + (this->randomJ) )/birdCount; //seteo el valor promedio para la nueva direccion del objeto bird
 
-	for (int i = 0; i < (birdCount - 1); i++)
+	for (int i = 0; i < (int)(birdCount - 1); i++)
 	{
 
 		if (!(this->is_equal_bird(bird[i]))  &&  (this->is_in_eyeSight(bird[i])) )  
@@ -63,15 +58,3 @@ double calculate_distance(Position p1, Position p2)
 	return distance;
 }
 
-
-
-
-////******************codigo para prueba*********************/////////
-int main(void)
-{
-
-
-
-
-
-}

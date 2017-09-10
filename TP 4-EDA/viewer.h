@@ -6,13 +6,15 @@
 #include "allegro5\display.h"
 #include "allegro5\bitmap.h"
 
+
 class Viewer{
 	public:
 
-		Viewer(char * path, Bird * birds_, unsigned int birdCount_ = 50, unsigned int width_ = 100, unsigned int height_ = 100);
-		int isIntOk ();
-		void updateDisplay();
+		Viewer(char* pic_dir,Bird * birds_, unsigned int birdCount_ = 50, unsigned int width_ = 100, unsigned int height_ = 100);
+		int is_init_ok();
+		void update_display();
 		~Viewer();
+		ALLEGRO_DISPLAY *get_display();
 	private:
 
 		unsigned int width;

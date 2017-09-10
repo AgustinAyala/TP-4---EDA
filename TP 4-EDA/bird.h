@@ -39,7 +39,7 @@ class Bird {
 
 	public:
 
-		static unsigned int birdCount;
+		//static unsigned int birdCount;
 
 		Bird(unsigned int eyeSight_ = 0, unsigned int speed_ = 5, unsigned int maxRandomJiggle_ = 0)
 			: eyeSight(eyeSight_),
@@ -68,7 +68,7 @@ class Bird {
 };
 
 
-unsigned int Bird::birdCount = 0; //esto no estoy seguro todavia, pero creo q me setearia inicialmente a cero para despues
+//unsigned int Bird::birdCount = 0; //esto no estoy seguro todavia, pero creo q me setearia inicialmente a cero para despues
 								  // en la simulacion incrementarlo;
 
 #endif // !BIRD_H
