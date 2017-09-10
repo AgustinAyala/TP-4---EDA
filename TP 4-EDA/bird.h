@@ -8,6 +8,24 @@
 #include <cstdbool>
 #include <cmath>
 
+
+//*******************************************************************************************************//
+class Position {
+public:
+	float x;
+	float y;
+	float Xmax;
+	float Ymax;
+
+
+	Position() // Constructor: incializo los valores inciales (x,y)
+		: Xmax(100.0),
+		Ymax(70.0),
+		x((float)(rand()) * Xmax / (float)(RAND_MAX)),
+		y((float)(rand()) * Ymax / (float)(RAND_MAX)) {}
+};
+
+
 class Bird {
 
 	private:
@@ -50,23 +68,6 @@ class Bird {
 
 unsigned int Bird::birdCount = 0; //esto no estoy seguro todavia, pero creo q me setearia inicialmente a cero para despues
 								  // en la simulacion incrementarlo;
-
-
-//*******************************************************************************************************//
-class Position {
-	public:
-		float x;
-		float y;
-		float Xmax;
-		float Ymax;
-
-
-		Position() // Constructor: incializo los valores inciales (x,y)
-			: Xmax(100.0),
-			  Ymax(70.0),
-			  x((float)(rand()) * Xmax / (float)(RAND_MAX)),
-			  y((float)(rand()) * Ymax / (float)(RAND_MAX)) {}
-};
 
 
 
