@@ -1,6 +1,8 @@
-#ifndef _H_Viewer
+#ifndef VIEWER_H
+#define VIEWER_H
 
-#define _H_Viewer
+#include "bird.h"
+#include "allegro5\allegro.h"
 
 class Viewer{
 	public:

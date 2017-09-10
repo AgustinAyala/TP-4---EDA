@@ -1,5 +1,6 @@
 #include "viewer.h"
 
+
 /*
 private:
 
@@ -20,6 +21,8 @@ Viewer::Viewer(char * path, Bird * birds_, unsigned int birdCount_, unsigned int
 	birdCount = birdCount_;
 	width = width_;
 	height = height_;
+
+
 }
 
 
