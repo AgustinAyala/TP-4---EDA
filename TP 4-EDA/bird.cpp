@@ -16,8 +16,7 @@ double Bird::getRandomJ() { return this->randomJ; };
 
 
 //Metodos Publicos: nescesito que los vea la simulacion
-void Bird::move()
-{
+void Bird::move(){
 	double prom = 0.0; //variable auxiliar para calcular el promedio de las direcciones de los birds en el rango del bird del cual quiero saber su newDir.
 
 
@@ -33,7 +32,7 @@ double Bird::calculate_new_dir(Bird * bird, unsigned int birdCount)
 		if (!(this->is_equal_bird(bird[i])) )  // es otro bird distinto al cual quiero calcular newDir? Si es distinto, me fijo si esta 
 													// en su alcance
 		{
-			if (is_in_eyeSight( ))
+			//if (is_in_eyeSight( ))
 
 		}
 
