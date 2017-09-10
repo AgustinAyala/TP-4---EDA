@@ -21,6 +21,9 @@
     <ClInclude Include="bird.h">
       <Filter>Archivos de código fuente</Filter>
     </ClInclude>
+    <ClInclude Include="controller.h">
+      <Filter>Archivos de código fuente</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="viewer.cpp">
@@ -30,6 +33,9 @@
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="bird.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="controller.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
   </ItemGroup>

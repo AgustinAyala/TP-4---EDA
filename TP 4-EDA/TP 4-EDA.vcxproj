@@ -112,11 +112,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="bird.cpp" />
+    <ClCompile Include="controller.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="viewer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bird.h" />
+    <ClInclude Include="controller.h" />
     <ClInclude Include="viewer.h" />
   </ItemGroup>
   <ItemGroup>
