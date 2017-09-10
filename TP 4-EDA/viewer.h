@@ -10,14 +10,13 @@ class Viewer{
 	public:
 
 		Viewer(char * path, Bird * birds_, unsigned int birdCount_ = 50, unsigned int width_ = 100, unsigned int height_ = 100);
-		//~Viewer();
 		int isIntOk ();
-		//updateDisplay();
-
+		void updateDisplay();
+		~Viewer();
 	private:
 
 		unsigned int width;
-		unsigned int heigth;
+		unsigned int height;
 		unsigned int birdCount;
 
 		bool is_okay;
@@ -26,6 +25,7 @@ class Viewer{
 		Bird *	birds;
 		ALLEGRO_DISPLAY* display;
 		ALLEGRO_BITMAP*	font;
+		
 		
 };
 
