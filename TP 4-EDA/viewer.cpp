@@ -15,9 +15,7 @@ AL_FONT	*	font;
 
 */
 
-Viewer(char * path, Bird * birds_, unsigned int birdCount_, unsigned int width_, unsigned int height_)
-{
-
+Viewer::Viewer(char * path, Bird * birds_, unsigned int birdCount_, unsigned int width_, unsigned int height_){
 	birds = birds_;
 	birdCount = birdCount_;
 	width = width_;
@@ -25,4 +23,6 @@ Viewer(char * path, Bird * birds_, unsigned int birdCount_, unsigned int width_,
 }
 
 
-int isIntOk(Viewer * view)
+int isIntOk(Viewer * view) {
+
+}

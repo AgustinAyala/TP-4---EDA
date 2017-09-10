@@ -6,6 +6,7 @@
 #include <ctime>
 #include <cstdlib>
 #include <cstdbool>
+#include <cmath>
 
 class Bird {
 
