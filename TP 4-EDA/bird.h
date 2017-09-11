@@ -15,35 +15,13 @@ typedef unsigned int uint;
 
 //*******************************************************************************************************//
 class Position {
-<<<<<<< HEAD
 public:
 	float x;
 	float y;
 	float Xmax;
 	float Ymax;
-
-
-	Position() // Constructor: incializo los valores inciales (x,y)
-		: Xmax(100.0),
-		Ymax(70.0),
-		x(5), //((float)(rand()) * Xmax / (float)(RAND_MAX)),
-		y(2) //((float)(rand()) * Ymax / (float)(RAND_MAX)) 
-	{}
-=======
-	public:
-		float x;
-		float y;
-		float Xmax;
-		float Ymax;
-
-
-		Position() // Constructor: incializo los valores inciales (x,y)
-			: Xmax(100.0),
-			Ymax(70.0),
-			x((float)(rand()) * Xmax / (float)(RAND_MAX)),
-			y((float)(rand()) * Ymax / (float)(RAND_MAX)) {}
-		Position(float Xmax, float Ymax, float x, float y);
->>>>>>> 5f427ba4590e90a6748353a2d015d563059177e4
+	Position(){}
+	Position(float Xmax, float Ymax, float x, float y);
 };
 
 
@@ -63,18 +41,7 @@ class Bird {
 		uint step_count;
 	public:
 
-<<<<<<< HEAD
-		static unsigned int birdCount;
-
-		Bird(unsigned int eyeSight_ = 0, unsigned int speed_ = 5, unsigned int maxRandomJiggle_ = 0)
-			: eyeSight(eyeSight_),
-			speed(speed_),
-			maxRandomJiggle(maxRandomJiggle_),
-			currentDirection((double) (15)), //( 360.0*rand()/RAND_MAX) ),
-			pos(Position()) {}
-=======
 		//static unsigned int birdCount;
->>>>>>> 5f427ba4590e90a6748353a2d015d563059177e4
 
 		void init_Bird(uint eyeSight_ , uint speed_ , uint maxRandomJiggle_ ,
 			uint period, uint step_count, uint width, uint height, uint x, uint y);

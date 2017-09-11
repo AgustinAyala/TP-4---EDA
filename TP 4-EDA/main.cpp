@@ -26,10 +26,6 @@ char *birds_dirs[] = {
 
 
 int main() {
-<<<<<<< HEAD
-	cout << "hello world" << '\n';
-	//system("pause");
-=======
 	Bird* birds = new Bird[BIRD_COUNT];
 	for (int i = 0; i < BIRD_COUNT; i++) {
 		double x = (rand() % 1000) * MAP_WIDTH / 1000.0;
@@ -44,7 +40,6 @@ int main() {
 	}
 	Controller controller = Controller(viewer.get_display(),birds, BIRD_COUNT);
 	Simulation simulation = Simulation(birds, BIRD_COUNT);
->>>>>>> 5f427ba4590e90a6748353a2d015d563059177e4
 
 	while (controller.is_not_exit()) {
 		controller.update();

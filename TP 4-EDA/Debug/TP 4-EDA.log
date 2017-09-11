@@ -1,1 +1,17 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Platform.targets(57,5): error MSB8020: No se pueden encontrar las herramientas de compilación para v140 (Conjunto de herramientas de la plataforma = 'v140'). Para compilar con las herramientas de compilación v140, instale las herramientas de compilación v140. También puede actualizar a las herramientas actuales de Visual Studio. Para ello, seleccione el menú Proyecto o haga clic con el botón secundario en la solución y, a continuación, seleccione "Actualizar solución".
+﻿  main.cpp
+  Generando código...
+  Compilando...
+  viewer.cpp
+c:\users\agust\source\repos\tp-4v2\tp-4---eda\tp 4-eda\viewer.cpp(38): warning C4018: '<': no coinciden signed/unsigned
+c:\users\agust\source\repos\tp-4v2\tp-4---eda\tp 4-eda\viewer.cpp(56): warning C4018: '<': no coinciden signed/unsigned
+c:\users\agust\source\repos\tp-4v2\tp-4---eda\tp 4-eda\viewer.cpp(72): warning C4018: '<': no coinciden signed/unsigned
+  bird.cpp
+c:\users\agust\source\repos\tp-4v2\tp-4---eda\tp 4-eda\bird.cpp(47): warning C4244: 'argumento': conversión de 'uint' a 'float'; posible pérdida de datos
+c:\users\agust\source\repos\tp-4v2\tp-4---eda\tp 4-eda\bird.cpp(56): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\agust\source\repos\tp-4v2\tp-4---eda\tp 4-eda\bird.cpp(57): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+  Generando código...
+  Omitiendo... (no se detectaron cambios relevantes)
+  simulation.cpp
+  controller.cpp
+  TP 4-EDA.vcxproj -> C:\Users\agust\source\repos\TP-4v2\TP-4---EDA\Debug\TP 4-EDA.exe
+  TP 4-EDA.vcxproj -> C:\Users\agust\source\repos\TP-4v2\TP-4---EDA\Debug\TP 4-EDA.pdb (Partial PDB)

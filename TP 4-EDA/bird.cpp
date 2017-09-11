@@ -36,9 +36,7 @@ uint Bird::get_animation_step() {
 /***************************************************************************/
 
 //Metodos Publicos: nescesito que los vea la simulacion (todavia hay q chekear!!!!!!)
-<<<<<<< HEAD
 
-=======
 void Bird::init_Bird(uint eyeSight_ , uint speed_ , uint maxRandomJiggle_ , uint step_count  , uint period , uint width , uint height, uint x , uint y){
 	
 	this->eyeSight = eyeSight_;
@@ -52,7 +50,6 @@ void Bird::init_Bird(uint eyeSight_ , uint speed_ , uint maxRandomJiggle_ , uint
 	this->animation_period = period;
 	this->step_count = step_count;
 }
->>>>>>> 5f427ba4590e90a6748353a2d015d563059177e4
 
 void Bird::move() {
 	this->currentDirection = this->newDirection;
@@ -122,7 +119,6 @@ double calculate_distance(Position p1, Position p2)
 	return distance;
 }
 
-<<<<<<< HEAD
 void Bird::incrementEyeSight()
 {
 	this->eyeSight++;
@@ -132,15 +128,3 @@ void Bird::decrementEyesight()
 {
 	this->eyeSight--;
 }
-
-////******************codigo para prueba*********************/////////
-int main(void)
-{
-
-
-
-
-
-}
-=======
->>>>>>> 5f427ba4590e90a6748353a2d015d563059177e4
