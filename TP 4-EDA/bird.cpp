@@ -119,12 +119,23 @@ double calculate_distance(Position p1, Position p2)
 	return distance;
 }
 
-void Bird::incrementEyeSight()
-{
+void Bird::incrementEyeSight() {
 	this->eyeSight++;
 }
-
-void Bird::decrementEyesight()
-{
+void Bird::decrementEyesight() {
 	this->eyeSight--;
+}
+void Bird::incrementSpeed() {
+	this->speed++;
+}
+void Bird::decrementSpeed() {
+	this->speed--;
+}
+void Bird::incrementRj() {
+	if (this->randomJ < this->maxRandomJiggle)
+		this->randomJ = (this->randomJ) + 1;
+}
+void Bird::decrementRj() {
+	if (this->randomJ > 0)
+		this->randomJ = (this->randomJ) - 1;
 }

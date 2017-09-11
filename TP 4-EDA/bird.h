@@ -52,6 +52,8 @@ class Bird {
 		void decrementEyesight();
 		void incrementSpeed();
 		void decrementSpeed();
+		void incrementRj();
+		void decrementRj();
 		
 		void increment_animation_step();
 		uint get_animation_step();
