@@ -66,7 +66,7 @@ class Bird {
 		unsigned int getEyeSight();
 		double getRandomJ();
 		Position getPosition();
-
+		
 };
 
 
