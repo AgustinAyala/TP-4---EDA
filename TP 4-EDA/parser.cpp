@@ -1,4 +1,6 @@
 #include "parser.h"
+#include <iostream>
+using namespace std;
 
 int parseCmdLine(int argc, char *argv[], pCallback p, void *userData) {
 
@@ -8,7 +10,6 @@ int parseCmdLine(int argc, char *argv[], pCallback p, void *userData) {
 	int parseerror = 0;
 	int parsing_ans;
 	int i;
-
 	for (i = 1; i<argc && (parseerror != PARSE_CMDL_ERROR); i++) { //skipeo el nombre del ejecutable 
 		if (argv[i][0] == OPTION_IDENTIFIER) {
 
@@ -17,7 +18,7 @@ int parseCmdLine(int argc, char *argv[], pCallback p, void *userData) {
 				cant_options++;
 			}
 			else {
-				printf("%s %d\n", "Error en opción", cant_options + 1);
+				printf("%s %d\n", "Error en opcion", cant_options + 1);
 				parseerror = PARSE_CMDL_ERROR;
 			}
 

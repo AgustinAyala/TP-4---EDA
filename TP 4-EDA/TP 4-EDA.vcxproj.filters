@@ -31,7 +31,13 @@
       <Filter>Archivos de código fuente</Filter>
     </ClInclude>
     <ClInclude Include="main.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Archivos de código fuente</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>Archivos de código fuente</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Archivos de código fuente</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +57,9 @@
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="parser.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
   </ItemGroup>

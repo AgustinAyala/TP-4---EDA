@@ -1,6 +1,3 @@
-﻿  bird.cpp
-f:\tp-4---eda\tp 4-eda\bird.cpp(46): warning C4244: 'argument': conversion from 'uint' to 'float', possible loss of data
-f:\tp-4---eda\tp 4-eda\bird.cpp(55): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-f:\tp-4---eda\tp 4-eda\bird.cpp(56): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+﻿  main.cpp
   TP 4-EDA.vcxproj -> F:\TP-4---EDA\x64\Debug\TP 4-EDA.exe
   TP 4-EDA.vcxproj -> F:\TP-4---EDA\x64\Debug\TP 4-EDA.pdb (Partial PDB)

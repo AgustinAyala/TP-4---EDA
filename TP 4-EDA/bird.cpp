@@ -1,5 +1,7 @@
 
 #include "bird.h"
+#include "config.h"
+
 #include <cmath>
 #include <cstdio>
 #include <iostream>
@@ -30,6 +32,8 @@ double Bird::getRandomJ() { return this->randomJ; };
 
 Position Bird::getPosition() { return this->pos; };
 
+uint Bird::getSpeed() { return this->speed; };
+
 uint Bird::get_animation_step() {
 	return this->animation_step;
 }
@@ -37,14 +41,14 @@ uint Bird::get_animation_step() {
 
 //Metodos Publicos: nescesito que los vea la simulacion (todavia hay q chekear!!!!!!)
 
-void Bird::init_Bird(uint eyeSight_ , uint speed_ , uint maxRandomJiggle_ , uint step_count  , uint period , uint width , uint height, uint x , uint y){
+void Bird::init_Bird(uint eyeSight_ , uint speed_ , uint randomJ , uint step_count  , uint period , uint width , uint height, uint x , uint y){
 	
 	this->eyeSight = eyeSight_;
 	this->speed = speed_;
-	this->maxRandomJiggle = maxRandomJiggle_;
+	this->randomJ = randomJ;
 	this->currentDirection = (double)(rand() % 360);
 	this->newDirection = this->currentDirection;
-	this->pos = Position(width , height , x , y);
+	this->pos = Position((float)width , (float)height , (float)x , (float)y);
 	this->animation_step = 0;
 	this->animation_count = 0;
 	this->animation_period = period;
@@ -53,8 +57,8 @@ void Bird::init_Bird(uint eyeSight_ , uint speed_ , uint maxRandomJiggle_ , uint
 
 void Bird::move() {
 	this->currentDirection = this->newDirection;
-	this->pos.x += cos(this->getDir()*PI / 180.0) * this->speed;
-	this->pos.y += sin(this->getDir()*PI / 180.0) * this->speed;
+	this->pos.x += cos(this->getDir()*PI / 180.0) * (float)this->speed;
+	this->pos.y += sin(this->getDir()*PI / 180.0) * (float)this->speed;
 	if (this->pos.x < 0) {
 		this->pos.x = this->pos.Xmax;
 	}
@@ -71,10 +75,8 @@ void Bird::move() {
 
 void Bird::calculate_new_dir(Bird * bird, unsigned int birdCount)
 {
-	//double prom = ( (this->currentDirection) + (this->randomJ) )/birdCount; //seteo el valor promedio para la nueva direccion del objeto bird
 	double prom = 0;
 
-	//cout << this->eyeSight << '\n';
 	int tot_sum = 0;
 	for (int i = 0; i < (int)(birdCount); i++)
 	{
@@ -85,7 +87,7 @@ void Bird::calculate_new_dir(Bird * bird, unsigned int birdCount)
 		}
 	}
 
-	this->newDirection = prom / tot_sum + (double)(rand() % this->maxRandomJiggle);
+	this->newDirection = prom / tot_sum + (double)((rand()) % (this->randomJ+1) );
 }
 
 bool Bird::is_equal_bird(Bird& bird) const
@@ -121,21 +123,28 @@ double calculate_distance(Position p1, Position p2)
 
 void Bird::incrementEyeSight() {
 	this->eyeSight++;
+	if (this->eyeSight >= MAX_EYESIGHT) {
+		this->eyeSight = MAX_EYESIGHT;
+	}
 }
 void Bird::decrementEyesight() {
-	this->eyeSight--;
+	if (this->eyeSight > MIN_EYESIGHT) {
+		this->eyeSight--;
+	}
 }
 void Bird::incrementSpeed() {
 	this->speed++;
+	if (this->speed >= MAX_SPEED) {
+		this->speed = MAX_SPEED;
+	}
 }
 void Bird::decrementSpeed() {
-	this->speed--;
+	if (this->speed > MIN_SPEED) {
+		this->speed--;
+	}
 }
-void Bird::incrementRj() {
-	if (this->randomJ < this->maxRandomJiggle)
-		this->randomJ = (this->randomJ) + 1;
-}
-void Bird::decrementRj() {
-	if (this->randomJ > 0)
-		this->randomJ = (this->randomJ) - 1;
+void Bird::SetRJ(uint RJ) {
+	if (RJ > 1 && RJ <= MAX_RJ) {
+		this->randomJ = RJ;
+	}
 }

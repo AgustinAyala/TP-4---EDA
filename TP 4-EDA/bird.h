@@ -1,3 +1,9 @@
+
+/*** Bird ***/
+
+/*** Controla de realizar todas las cuentas para el movimiento de los pajaros ***/
+
+
 #ifndef BIRD_H
 #define BIRD_H
 
@@ -7,6 +13,8 @@
 #include <cstdbool>
 
 using namespace std;
+
+
 
 #define PI 3.141592
 
@@ -29,9 +37,9 @@ class Bird {
 	private:
 		double currentDirection;
 		double newDirection;
-		double randomJ;
+		uint randomJ;
 		uint eyeSight;
-		uint maxRandomJiggle;
+
 		uint speed;
 		Position pos;
 		uint animation_step;
@@ -40,19 +48,16 @@ class Bird {
 		uint step_count;
 	public:
 
-		//static unsigned int birdCount;
-
-		void init_Bird(uint eyeSight_ , uint speed_ , uint maxRandomJiggle_ ,
+		void init_Bird(uint eyeSight_ , uint speed_ , uint randomJ,
 			uint period, uint step_count, uint width, uint height, uint x, uint y);
 	
 
-		void move();                                   //falta
+		void move();
 		void incrementEyeSight();
 		void decrementEyesight();
 		void incrementSpeed();
 		void decrementSpeed();
-		void incrementRj();
-		void decrementRj();
+		void SetRJ(uint RJ);
 		
 		void increment_animation_step();
 		uint get_animation_step();
@@ -65,6 +70,7 @@ class Bird {
 		double getNewDir();
 		unsigned int getEyeSight();
 		double getRandomJ();
+		uint getSpeed();
 		Position getPosition();
 		
 };

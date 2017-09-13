@@ -2,20 +2,24 @@
 
 #include <iostream>
 
-Controller::Controller(ALLEGRO_DISPLAY *display, Bird* birds, uint cnt_birds) {
+Controller::Controller(ALLEGRO_DISPLAY *display, Bird* birds, Simulation *sim, uint cnt_birds) {
 	this->is_ok_flag = 1;
 
 	this->exit_flag = 0;
 	this->birds = birds;
 	this->cnt_birds = cnt_birds;
 	this->queue = al_create_event_queue();
+	this->sim = sim;
+
 	if (!this->queue) {
 		this->is_ok_flag = 0;
+
 	}
 	al_register_event_source(this->queue, al_get_display_event_source(display));
 
 	if (!al_install_keyboard()) {
 		this->is_ok_flag = 0;
+
 	}
 
 	al_register_event_source(this->queue, al_get_keyboard_event_source());
@@ -45,18 +49,17 @@ void Controller::update() {
 				printf("OLD EYE : %d\n", this->birds->getEyeSight());
 				printf("OLD SP : %d\n", this->birds->getSpeed());
 			*/
-
+			if (action == ALLEGRO_KEY_J) {
+				if (operation == ADD) {
+					this->sim->IncreaseRandomJiggle();
+				}else if (operation == SUBSTRACT) {
+					this->sim->DecreaseRandomJiggle();
+				}
+			}
 			for (uint i = 0; i < (this->cnt_birds); i++)
 			{
-				if (action == ALLEGRO_KEY_J) {
-					if (operation == ADD) {
-						((this->birds) + i)->incrementRj();
-					}
-					else if (operation == SUBSTRACT) {
-						((this->birds) + i)->decrementRj();
-					}
-				}
-				else if (action == ALLEGRO_KEY_S) {
+				
+				if (action == ALLEGRO_KEY_S) {
 					if (operation == ADD) {
 						((this->birds) + i)->incrementSpeed();
 					}
