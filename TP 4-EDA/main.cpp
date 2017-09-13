@@ -1,31 +1,15 @@
-#include "viewer.h"
-#include "controller.h"
-#include "bird.h"
-#include "simulation.h"
-#include <iostream>
+#include "main.h"
 
-using namespace std;
+int main(int argc, char*argv[]) {
 
-const int SCREEN_WIDTH  = 800;
-const int SCREEN_HEIGHT = 600;
-const int BIRD_COUNT = 100;
-const int MAP_WIDTH = 100;
-const int MAP_HEIGHT = 70;
-const int RANGE = 3;
+	config_t config_ini;
 
-char *birds_dirs[] = {
-	"birds/frame_0_delay-0.08s.png",
-	"birds/frame_1_delay-0.08s.png",
-	"birds/frame_2_delay-0.08s.png",
-	"birds/frame_3_delay-0.08s.png",
-	"birds/frame_4_delay-0.08s.png",
-	"birds/frame_5_delay-0.08s.png",
-	"birds/frame_6_delay-0.08s.png",
-	"birds/frame_7_delay-0.08s.png"
-};
+	pCallback callBack = callbackConfiguration;
 
+	defaultConfig(&config_ini);
 
-int main() {
+	parseCmdLine(argc, argv, callBack, &config_ini);
+	
 	Bird* birds = new Bird[BIRD_COUNT];
 	for (int i = 0; i < BIRD_COUNT; i++) {
 		double x = (rand() % 1000) * MAP_WIDTH / 1000.0;
@@ -47,4 +31,43 @@ int main() {
 		simulation.update();
 		al_rest(0.02);
 	}
+}
+
+void defaultConfig(config_t * config_ini)
+{
+	config_ini->eye_sight = DEFAULT_EYESIGHT;
+	config_ini->max_RJ = DEFAULT_RJ;
+	config_ini->speed = DEFAULT_SPEED;
+}
+
+int callbackConfiguration(char * key, char* value, void * userData) {
+	int retr_value = 0;				//se define por defecto el valor de retorno 0 (error)
+	int value_ = -1;				//se setea en -1 en caso de que no se pase ningun valor
+	string key_ = (string) key;
+
+	if ((key_ == "e") || (key_ == "E")) {
+		if ((value_ > 1) && (value_ < MAX_EYESIGHT)) {					//verifico si la key y el valor son validos
+			((config_t *)userData)->eye_sight = value_;
+			retr_value = 1;
+		}
+		else
+			retr_value = 0;
+	}
+	else if ((key_ == "s") || (key_ == "S")) {
+		if ((value_ > 0) && (value_ < MAX_SPEED)) {
+			((config_t *)userData)->speed = value_;
+			retr_value = 1;
+		}
+		else
+			retr_value = 0;
+	}
+	else if (( key_ == "r") || (key_ == "R")) {
+		if ((value_ > 0) && (value_ < MAX_RJ)) {
+			((config_t *)userData)->max_RJ = value_;
+			retr_value = 1;
+		}
+		else
+			retr_value = 0;
+	}
+	return retr_value;
 }

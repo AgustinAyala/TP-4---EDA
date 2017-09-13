@@ -159,6 +159,7 @@
   <ItemGroup>
     <ClInclude Include="bird.h" />
     <ClInclude Include="controller.h" />
+    <ClInclude Include="main.h" />
     <ClInclude Include="parser.h" />
     <ClInclude Include="simulation.h" />
     <ClInclude Include="viewer.h" />

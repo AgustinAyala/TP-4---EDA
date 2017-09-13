@@ -1,6 +1,18 @@
-﻿  controller.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
+﻿  viewer.cpp
+c:\users\usuario\source\repos\tp-4---eda\tp 4-eda\viewer.cpp(38): warning C4018: '<': signed/unsigned mismatch
+c:\users\usuario\source\repos\tp-4---eda\tp 4-eda\viewer.cpp(56): warning C4018: '<': signed/unsigned mismatch
+c:\users\usuario\source\repos\tp-4---eda\tp 4-eda\viewer.cpp(72): warning C4018: '<': signed/unsigned mismatch
+  simulation.cpp
+c:\users\usuario\source\repos\tp-4---eda\tp 4-eda\simulation.cpp(8): warning C4018: '<': signed/unsigned mismatch
+c:\users\usuario\source\repos\tp-4---eda\tp 4-eda\simulation.cpp(11): warning C4018: '<': signed/unsigned mismatch
   main.cpp
+  bird.cpp
+c:\users\usuario\source\repos\tp-4---eda\tp 4-eda\bird.cpp(47): warning C4244: 'argument': conversion from 'uint' to 'float', possible loss of data
+c:\users\usuario\source\repos\tp-4---eda\tp 4-eda\bird.cpp(56): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+c:\users\usuario\source\repos\tp-4---eda\tp 4-eda\bird.cpp(57): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+  Compiling...
+  controller.cpp
+  Generating Code...
   TP 4-EDA.vcxproj -> C:\Users\Usuario\Source\Repos\TP-4---EDA\Debug\TP 4-EDA.exe
   TP 4-EDA.vcxproj -> C:\Users\Usuario\Source\Repos\TP-4---EDA\Debug\TP 4-EDA.pdb (Partial PDB)
