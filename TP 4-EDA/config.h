@@ -6,8 +6,8 @@
 typedef unsigned int uint;
 
 const uint MAX_EYESIGHT = 50;
-const uint MAX_SPEED = 50;
-const uint MAX_RJ = 200;
+const uint MAX_SPEED = 30;
+const uint MAX_RJ = 10;
 
 const uint MIN_EYESIGHT = 0;
 const uint MIN_SPEED = 1;
