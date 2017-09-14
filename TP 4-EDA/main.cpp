@@ -77,57 +77,48 @@ void defaultConfig(config_t * config_ini)
 int callbackConfiguration(char * key, char* value, void * userData) {
 	int retr_value = 0;				//se define por defecto el valor de retorno 0 (error)
 	
-	int value_ = atoi(value);				//se setea en -1 en caso de que no se pase ningun valor
+					//se setea en -1 en caso de que no se pase ningun valor
+	string key_;
+	if (key != NULL) {
+		lowerize(key);
+		key_ = (string)key;
+	}else {
+		return 0; // no aceptamos si no hay keys. 
+	}
+	int value_;
+	if (is_number(value)) {
+		value_ = atoi(value);
+	}else {
+		return 0;
+	}
+	
 
-	lowerize(key);
-	string key_ = (string) key;
-
-	//cout << key_ << '\n';
-	//cout << ((config_t *)userData)->eye_sight << '\n';
-	//cout << UINT_MAX << '\n';
-	//cout << value_ << '\n';
 	if (key_ == "eyesight") {
 		//cout << (value_ >= MIN_EYESIGHT) && (value_ <= MAX_EYESIGHT) << '\n';
 
 		if ((value_ >= MIN_EYESIGHT) && (value_ <= MAX_EYESIGHT) && ((config_t *)userData)->eye_sight == UINT_MAX) {					//verifico si la key y el valor son validos
-			
-			if (is_number(value)) {
-				((config_t *)userData)->eye_sight = value_;
-				retr_value = 1;
-			}
-			else {
-				retr_value = 0;
-			}
-		}
-		else
+			((config_t *)userData)->eye_sight = value_;
+			retr_value = 1;
+		}else {
 			retr_value = 0;
+		}
 	}
 	else if (key_ == "maxspeed") {
 		if ((value_ >= MIN_SPEED) && (value_ <= MAX_SPEED) && ((config_t *)userData)->speed == UINT_MAX) {
-			if (is_number(value)) {
-				((config_t *)userData)->speed = value_;
-				retr_value = 1;
-			}else {
-				retr_value = 0;
-			}
-			
-		}
-		else
+			((config_t *)userData)->speed = value_;
+			retr_value = 1;
+		}else {
 			retr_value = 0;
+		}
 	}
 	else if (key_ == "randomjiggle") {
 		if ((value_ >= MIN_RJ) && (value_ <= MAX_RJ) && ((config_t *)userData)->max_RJ == UINT_MAX) {
-			if (is_number(value)) {
-				((config_t *)userData)->max_RJ = value_;
-				retr_value = 1;
-			}
-			else {
-				retr_value = 0;
-			}
-		}
-		else {
+			((config_t *)userData)->max_RJ = value_;
+			retr_value = 1;
+		}else {
 			retr_value = 0;
 		}
+
 	}
 	
 	return retr_value;
